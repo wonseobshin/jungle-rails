@@ -1,0 +1,23 @@
+# The items in the order and:
+    # Their image, name and description
+    # Their respective quantities and line item totals
+# The final amount for the order
+# The email that was used
+
+<tr>
+    <td>
+        image
+    </td>
+    <td>
+         <h4><%= order.line_items.product %></h4>
+    </td>
+    <td>
+        description
+    </td>
+    <td>
+        quantity
+    </td>
+    <td>
+      <h4><%= order.line_items.total_price %></h4>
+    </td>
+</tr>

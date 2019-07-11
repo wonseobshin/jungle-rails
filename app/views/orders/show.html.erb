@@ -7,7 +7,43 @@
   <div class="order-summary jumbotron">
     <h4>Thank you for your order!</h4>
   </div>
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>Your Order</th>
+        <td>
+          Name
+        </td>
+        <td>
+          Description
+        </td>
+        <td>
+          Quantity
+        </td>
+        <td>
+          Price
+        </td>
+      </tr>
+    </thead>
+    <tbody>
+      <% @order.line_items.each do |item| %>
+        <%= render partial: 'orders/list_items', locals: { item: item } %>
+      <% end %>
+      <td>
 
+      </td>
+      <td>
+      </td>
+      <td>
+      </td>
+      <td>
+          Total:
+      </td>
+      <td>
+          <%= '%.2f' % (@order.total_cents.to_i/100.0) %>
+      </td>
+    </tbody>
+  </table>
   <%= link_to "Continue Shopping", root_path, class: 'btn btn-lg btn-primary' %>
 
 </section>
