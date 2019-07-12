@@ -1,4 +1,7 @@
 class Admin::CategoriesController < ApplicationController
+    #for http BA
+    include HttpAuthConcern
+    
   def index
     @categories = Category.all
   end
