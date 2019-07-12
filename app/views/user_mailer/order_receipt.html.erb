@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Thank you!</h1>
+    <p>
+      You have successfully placed an order!
+    </p>
+    <thead>
+      <tr>
+        <th>Your Order</th>
+        <td>
+          Description
+        </td>
+        <td>
+          Quantity
+        </td>
+        <td>
+          Price
+        </td>
+      </tr>
+    </thead>
+    <tbody>
+      <% @order.line_items.each do |item| %>
+        <tr>
+            <td>
+                <h4><%= item.product.name %></h4>
+            </td>
+            <td>
+                <h4><%= item.product.description %></h4>
+            </td>
+            <td>
+                <h4><%= item.quantity %></h4>
+            </td>
+            <td>
+                <h4><%= item.total_price %></h4>
+            </td>
+        </tr>
+      <% end %>
+      <tr>
+        <td>
+        </td>
+        <td>
+        </td>
+        <td>
+            Total:
+        </td>
+        <td>
+            <%= '%.2f' % (@order.total_cents.to_i/100.0) %>
+        </td>
+      </tr>
+    </tbody>
+  </body>
+</html>
