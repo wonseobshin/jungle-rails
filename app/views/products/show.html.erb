@@ -24,6 +24,22 @@
           <dd><%= @product.price %></dd>
         </dl>
       </div>
+
+      <div>
+        <% puts @product.reviews %>
+        <% @product.reviews.each do |review| %>
+          <p><%= review.description %></p>
+        <% end %>
+      </div>
+      <div>
+      <%= form_for :review, url: product_reviews_url(@product)  do |f| %>
+          Review: <%= f.text_field :description %>
+          <br>
+          Rating: <%= f.select :rating, [ '1', '2', '3', '4', '5' ], :prompt => 'Select One' %>
+          <br>
+          <%= f.submit "Submit" %>
+        <% end %>
+      </div>
     </div>
 
   </article>
