@@ -32,17 +32,13 @@
         <% end %>
       </div>
       <div>
-      <%= form_for @product do |f| %>
-        <%= f.fields_for :reviews do |ff| %>
-
-          Review: <%= ff.text_field :description %>
+      <%= form_for :review, url: product_reviews_url(@product)  do |f| %>
+          Review: <%= f.text_field :description %>
           <br>
-          Rating: <%= ff.text_field :rating %>
+          Rating: <%= f.select :rating, [ '1', '2', '3', '4', '5' ], :prompt => 'Select One' %>
           <br>
           <%= f.submit "Submit" %>
-        
         <% end %>
-      <% end %>
       </div>
     </div>
 
