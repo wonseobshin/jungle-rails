@@ -32,7 +32,7 @@ RSpec.feature "Visitor navigates to product show page", type: :feature, js: true
     # DEBUG
     sleep 1
 
-    save_screenshot
+    # save_screenshot
 
     # VERIFY
     expect(page).to have_css 'section.products-show'
