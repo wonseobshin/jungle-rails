@@ -4,8 +4,6 @@ A mini e-commerce application built with Rails 4.2 for purposes of teaching Rail
 
 ![main page](https://github.com/wonseobshin/jungle-rails/blob/master/public/jungle-main.JPG)
 
-![category page](https://github.com/wonseobshin/jungle-rails/blob/master/public/jungle-category.JPG)
-
 ## Setup
 
 1. Fork & Clone
