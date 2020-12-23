@@ -2,6 +2,9 @@
 
 A mini e-commerce application built with Rails 4.2 for purposes of teaching Rails by example.
 
+![main page](https://github.com/wonseobshin/jungle-rails/blob/master/public/jungle-main.JPG)
+
+![category page](https://github.com/wonseobshin/jungle-rails/blob/master/public/jungle-category.JPG)
 
 ## Setup
 
@@ -16,6 +19,7 @@ A mini e-commerce application built with Rails 4.2 for purposes of teaching Rail
 9. Run `bin/rails s -b 0.0.0.0` to start the server
 
 ## Stripe Testing
+![stripe view](https://github.com/wonseobshin/jungle-rails/blob/master/public/jungle-stripe.JPG)
 
 Use Credit Card # 4111 1111 1111 1111 for testing success scenarios.
 
